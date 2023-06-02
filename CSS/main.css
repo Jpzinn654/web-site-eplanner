@@ -1,0 +1,401 @@
+/* html{
+    scroll-behavior: smooth;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #1b354b;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.navbar {
+  /* background-color: #1f3d56; */
+  background: linear-gradient(to right, #141e30, #243b55); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow: hidden;
+  text-align: center;
+
+}
+
+.navbar a {
+  display: inline-block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+.navbar a.logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navbar a:hover {
+  transition: 800ms;
+  color: #02CB7F;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {
+    display: none;
+  }
+
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {
+    position: relative;
+  }
+
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+}
+
+.header {
+  height: 100vh;
+  /* background: #234161; */
+  /* background-image: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgba(27, 24, 113, 1) 93.2%); */
+  background: linear-gradient(to right, #141e30, #243b55); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  opacity: 0;
+  /* transform: translateY(-50px);
+    animation: floatAnimation 3s ease-in-out forwards; */
+}
+
+/* @keyframes floatAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  } */
+
+.header.bottom-text,
+h1 {
+  position: relative;
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  /* animation: floatAnimation 3s ease-in-out forwards; */
+  /* color: #02CB7F; */
+  letter-spacing: 5px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.header img {
+  position: relative;
+  /* top: 15%;
+    left: 30%;
+    width: 40%; */
+}
+
+
+.section {
+  height: 100vh;
+  background: #1f3d56;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+
+
+.section .content-wrapper,
+h2,
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section p {
+  font-size: 18px;
+  margin: 0;
+  width: 60%;
+  text-align: left;
+}
+
+.section .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 30px; */
+}
+
+.section .content-wrapper .section-img {
+  width: 400px;
+  height: 400px;
+  /* margin-right: 30px;
+    margin-left: 30px; */
+}
+
+.section.form {
+  background: #1b354b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section.form h2 {
+  margin-bottom: 20px;
+}
+
+.section.form .form-container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.section.form input,
+.section.form textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.section.form button {
+  background-color: #02CB7F;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.section.form a:hover {
+  background-color: #12263a;
+}
+
+.section.form h2 {
+  color: black;
+}
+
+.footer {
+  background-color: #333333;
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer .social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+#section3 {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+#section2 p,
+h2 {
+  color: black;
+}
+
+#section2 {
+  background-color: #fffe;
+  border-radius: 30px;
+}
+
+#section2 p h2 {
+  color: black;
+}
+
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #02CB7F;
+  color: #ffffff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#scrollToTop:hover {
+  background-color: #12263a;
+}
+
+#scrollToTop i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+@keyframes floatAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .section p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .section p {
+    font-size: 14px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #02CB7F;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #333333;
+}
+
+.box {
+  background-color: #02CB7F;
+  width: 5px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.box h2 {
+  width: 300px;
+}
+
+.big-section {
+  height: 160vh;
+  background-color: #1f3d56;
+  display: flex;
+  justify-content: center;
+        align-items: center;
+  color: #ffffff;
+  text-align: center;
+
+  /* opacity: 0;
+        transition: opacity 1s ease-in-out; */
+}
+
+#section2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.big-section .big-section-text {
+  display: flex;
+  align-items: center;
+}
+
+.big-section .card-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.big-section .mini-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 10px;
+  height: 200px;
+}
+
+.mini-card-icon {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.mini-card-title {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.mini-card-description {
+  font-size: 14px;
+  color: #777;
+  text-align: center;
+}
+
+#card-1{
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
